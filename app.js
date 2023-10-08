@@ -12,3 +12,15 @@
 
 // TEST DATA 1: Dolphins scored 44, 23, and 71. Koalas scored 65, 54, and 49.
 // TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27.
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3)/3;
+
+const scoreDolphins = calcAverage(44,23,71);
+const scoreKoalas = calcAverage(65, 54, 49);
+
+function checkWinner(avgDolphins,avgKoalas){
+    
+    return avgDolphins > avgKoalas ? `Dolphins win (${avgDolphins} vs. ${avgKoalas})` : `Koalas win (${avgKoalas} vs. ${avgDolphins})`;
+}
+
+console.log(checkWinner(scoreDolphins,scoreKoalas));
